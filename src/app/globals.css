@@ -117,6 +117,12 @@ summary {
   }
 }
 
+/* Drawer visibility transition utility */
+.transition-visibility {
+  transition-property: visibility;
+  transition-duration: 0s;
+}
+
 @keyframes heartbeat {
   0%, 100% {
     transform: scale(1);

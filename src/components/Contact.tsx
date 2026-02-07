@@ -118,9 +118,9 @@ export default function Contact() {
 
   if (submitted) {
     return (
-      <section id="kontakt" className="py-20 sm:py-28 bg-white">
+      <section id="kontakt" className="py-14 sm:py-28 bg-white">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <div className="text-center max-w-lg mx-auto py-16">
+          <div className="text-center max-w-lg mx-auto py-10 sm:py-16">
             <div className="mx-auto flex h-16 w-16 items-center justify-center rounded-full bg-green-100 text-green-600 mb-6">
               <CheckCircle2 className="h-8 w-8" />
             </div>
@@ -146,7 +146,7 @@ export default function Contact() {
   }
 
   return (
-    <section id="kontakt" className="py-20 sm:py-28 bg-white">
+    <section id="kontakt" className="py-14 sm:py-28 bg-white">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <div className="text-center max-w-2xl mx-auto">

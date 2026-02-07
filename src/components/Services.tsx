@@ -6,7 +6,7 @@ import { getBlurPlaceholder } from "@/data/blurPlaceholders";
 
 export default function Services() {
   return (
-    <section id="uslugi" className="py-20 sm:py-28 bg-white">
+    <section id="uslugi" className="py-14 sm:py-28 bg-white">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <div className="text-center max-w-2xl mx-auto">
@@ -23,7 +23,7 @@ export default function Services() {
         </div>
 
         {/* Grid */}
-        <div className="mt-16 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
+        <div className="mt-10 sm:mt-16 grid grid-cols-2 gap-3 sm:gap-6 lg:grid-cols-4">
           {services.map((service) => (
             <Link
               key={service.slug}

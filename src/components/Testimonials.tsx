@@ -23,7 +23,7 @@ const testimonials = [
 
 export default function Testimonials() {
   return (
-    <section id="opinie" className="py-20 sm:py-28 bg-gray-50">
+    <section id="opinie" className="py-14 sm:py-28 bg-gray-50">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <div className="text-center max-w-2xl mx-auto">
@@ -40,11 +40,11 @@ export default function Testimonials() {
         </div>
 
         {/* Cards */}
-        <div className="mt-16 grid gap-8 md:grid-cols-3">
+        <div className="mt-10 sm:mt-16 grid gap-4 sm:gap-8 md:grid-cols-3">
           {testimonials.map((t) => (
             <div
               key={t.name}
-              className="relative rounded-2xl bg-white p-8 shadow-sm border border-gray-100 hover:shadow-lg hover:border-primary-100 hover:-translate-y-1 transition-all duration-300"
+              className="relative rounded-xl sm:rounded-2xl bg-white p-5 sm:p-8 shadow-sm border border-gray-100 hover:shadow-lg hover:border-primary-100 hover:-translate-y-1 transition-all duration-300"
             >
               <Quote className="absolute top-6 right-6 h-8 w-8 text-primary-100" />
 
