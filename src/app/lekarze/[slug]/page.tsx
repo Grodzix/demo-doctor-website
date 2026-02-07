@@ -1,10 +1,11 @@
 import { notFound } from "next/navigation";
 import Image from "next/image";
 import Link from "next/link";
-import { ArrowLeft, GraduationCap, Briefcase, Star } from "lucide-react";
+import { GraduationCap, Briefcase, Star } from "lucide-react";
 import { doctors, getDoctorBySlug } from "@/data/doctors";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import Breadcrumbs from "@/components/Breadcrumbs";
 
 export function generateStaticParams() {
   return doctors.map((d) => ({ slug: d.slug }));
@@ -40,13 +41,14 @@ export default async function DoctorPage({
         {/* Hero */}
         <section className="bg-gradient-to-br from-primary-50 via-white to-accent-50">
           <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-12 sm:py-16">
-            <Link
-              href="/#lekarze"
-              className="inline-flex items-center gap-2 text-sm text-gray-500 hover:text-primary-500 mb-8 transition-colors"
-            >
-              <ArrowLeft className="h-4 w-4" />
-              Powrót do zespołu
-            </Link>
+            <div className="mb-8">
+              <Breadcrumbs
+                items={[
+                  { label: "Lekarze", href: "/#lekarze" },
+                  { label: doctor.name },
+                ]}
+              />
+            </div>
 
             <div className="grid md:grid-cols-3 gap-10 items-start">
               {/* Photo */}

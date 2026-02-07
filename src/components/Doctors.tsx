@@ -2,6 +2,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { ArrowRight } from "lucide-react";
 import { doctors } from "@/data/doctors";
+import { getBlurPlaceholder } from "@/data/blurPlaceholders";
 
 export default function Doctors() {
   return (
@@ -36,7 +37,10 @@ export default function Doctors() {
                     src={doctor.image}
                     alt={doctor.name}
                     fill
+                    sizes="192px"
                     className="object-cover object-[center_25%]"
+                    placeholder={getBlurPlaceholder(doctor.image) ? "blur" : "empty"}
+                    blurDataURL={getBlurPlaceholder(doctor.image)}
                   />
                 ) : (
                   <div

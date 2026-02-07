@@ -2,6 +2,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { ArrowRight } from "lucide-react";
 import { services } from "@/data/services";
+import { getBlurPlaceholder } from "@/data/blurPlaceholders";
 
 export default function Services() {
   return (
@@ -35,7 +36,10 @@ export default function Services() {
                   src={service.image}
                   alt={service.name}
                   fill
+                  sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"
                   className="object-cover group-hover:scale-105 transition-transform duration-300"
+                  placeholder={getBlurPlaceholder(service.image) ? "blur" : "empty"}
+                  blurDataURL={getBlurPlaceholder(service.image)}
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent" />
                 <div className="absolute bottom-3 left-3 flex h-10 w-10 items-center justify-center rounded-lg bg-white/90 backdrop-blur-sm text-primary-500">

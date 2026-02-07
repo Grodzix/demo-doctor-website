@@ -1,5 +1,7 @@
 import Image from "next/image";
-import { Phone, CalendarCheck } from "lucide-react";
+import { CalendarCheck } from "lucide-react";
+import { getBlurPlaceholder } from "@/data/blurPlaceholders";
+import PhoneButton from "@/components/PhoneButton";
 
 export default function Hero() {
   return (
@@ -21,7 +23,8 @@ export default function Hero() {
             </div>
 
             <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold tracking-tight text-gray-900 leading-tight">
-              Twoje zdrowie,{" "}
+              Twoje zdrowie,
+              <br />
               <span className="text-primary-500">nasza misja</span>
             </h1>
 
@@ -33,7 +36,7 @@ export default function Hero() {
 
             <div className="mt-10 flex flex-col sm:flex-row gap-4">
               <a
-                href="#kontakt"
+                href="/#kontakt"
                 className="group/cta relative inline-flex items-center justify-center gap-2.5 overflow-hidden rounded-lg bg-primary-500 px-6 py-3.5 text-base font-semibold text-white shadow-lg shadow-primary-500/25 hover:shadow-xl hover:shadow-primary-500/30 active:scale-95 transition-all duration-300"
               >
                 <span className="absolute inset-0 -translate-x-full bg-gradient-to-r from-transparent via-white/25 to-transparent group-hover/cta:translate-x-full transition-transform duration-700 ease-in-out" />
@@ -45,16 +48,10 @@ export default function Hero() {
                       <span className="relative inline-flex h-2 w-2 rounded-full bg-accent-300" />
                     </span>
                   </span>
-                  Umów wizytę online
+                  Umów wizytę
                 </span>
               </a>
-              <a
-                href="tel:+48123456789"
-                className="inline-flex items-center justify-center gap-2 rounded-lg border-2 border-gray-200 bg-white px-6 py-3.5 text-base font-semibold text-gray-700 hover:border-primary-300 hover:text-primary-600 transition-colors"
-              >
-                <Phone className="h-5 w-5" />
-                +48 123 456 789
-              </a>
+              <PhoneButton />
             </div>
 
             {/* Trust badges */}
@@ -81,30 +78,23 @@ export default function Hero() {
           </div>
 
           {/* Hero image */}
-          <div className="hidden lg:flex relative justify-center">
-            <div className="relative w-[25rem] aspect-[3/4] rounded-2xl overflow-hidden shadow-2xl">
+          <div className="hidden lg:flex relative justify-end">
+            <div className="relative w-[28rem] aspect-[4/5] rounded-2xl overflow-hidden shadow-2xl">
               <Image
-                src="/photos/doctor2.jpg"
+                src="/photos/doctor2-hq.jpg"
                 alt="Lekarz przychodni MedCare"
                 fill
+                sizes="900px"
+                quality={95}
                 className="object-cover object-top"
                 priority
+                placeholder="blur"
+                blurDataURL={getBlurPlaceholder("/photos/doctor2-hq.jpg")}
               />
-            </div>
-            {/* Floating card */}
-            <div className="absolute -bottom-6 -right-6 rounded-xl bg-white p-4 shadow-lg border border-gray-100">
-              <div className="flex items-center gap-3">
-                <div className="flex h-12 w-12 items-center justify-center rounded-full bg-primary-100 text-primary-600">
-                  <CalendarCheck className="h-6 w-6" />
-                </div>
-                <div>
-                  <p className="text-sm font-semibold text-gray-900">
-                    2 500+ wizyt
-                  </p>
-                  <p className="text-xs text-gray-500">w tym miesiącu</p>
-                </div>
+              {/* Stat badge */}
+              <div className="absolute bottom-0 right-0 rounded-tl-xl rounded-br-2xl bg-white/90 backdrop-blur-sm px-4 py-2.5">
+                <p className="text-sm font-bold text-gray-900">2 500+ <span className="font-normal text-gray-500">wizyt/mies.</span></p>
               </div>
-
             </div>
           </div>
         </div>

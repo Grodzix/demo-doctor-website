@@ -1,10 +1,10 @@
-import { Shield, Clock, Users, Award } from "lucide-react";
+import { ThumbsUp, Clock, Users, Award, ShieldCheck } from "lucide-react";
 
 const stats = [
   { icon: Clock, value: "15+", label: "Lat doświadczenia" },
   { icon: Users, value: "10 000+", label: "Zadowolonych pacjentów" },
   { icon: Award, value: "25+", label: "Specjalistów" },
-  { icon: Shield, value: "98%", label: "Pozytywnych opinii" },
+  { icon: ThumbsUp, value: "98%", label: "Pozytywnych opinii" },
 ];
 
 export default function About() {
@@ -13,6 +13,11 @@ export default function About() {
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center">
           {/* Stats grid */}
+          <div className="relative">
+            {/* Central badge */}
+            <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 z-10 flex h-16 w-16 items-center justify-center rounded-full bg-primary-500 text-white shadow-lg shadow-primary-500/30 ring-4 ring-white">
+              <ShieldCheck className="h-8 w-8" />
+            </div>
           <div className="grid grid-cols-2 gap-4">
             {stats.map((stat) => (
               <div
@@ -34,6 +39,7 @@ export default function About() {
                 </div>
               </div>
             ))}
+          </div>
           </div>
 
           {/* Text */}

@@ -4,11 +4,11 @@ import { useState } from "react";
 import { Menu, X, Heart, CalendarCheck } from "lucide-react";
 
 const navLinks = [
-  { label: "O nas", href: "#o-nas" },
-  { label: "Usługi", href: "#uslugi" },
-  { label: "Lekarze", href: "#lekarze" },
-  { label: "Opinie", href: "#opinie" },
-  { label: "Kontakt", href: "#kontakt" },
+  { label: "O nas", href: "/#o-nas" },
+  { label: "Usługi", href: "/#uslugi" },
+  { label: "Lekarze", href: "/#lekarze" },
+  { label: "Opinie", href: "/#opinie" },
+  { label: "Kontakt", href: "/#kontakt" },
 ];
 
 export default function Header() {
@@ -19,14 +19,19 @@ export default function Header() {
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="flex h-16 items-center justify-between">
           {/* Logo */}
-          <a href="#" className="flex items-center gap-2 group">
-            <div className="relative flex h-9 w-9 items-center justify-center rounded-lg bg-primary-500 text-white transition-all duration-300 group-hover:bg-red-500 group-hover:scale-110 group-hover:shadow-lg group-hover:shadow-red-500/30">
-              <Heart className="h-5 w-5 transition-all duration-300 group-hover:fill-white group-hover:animate-[heartbeat_0.6s_ease-in-out_infinite]" />
-            </div>
-            <span className="text-xl font-bold text-gray-900">
-              Med<span className="text-primary-500 transition-colors duration-300 group-hover:text-red-500">Care</span>
+          <div className="flex items-center gap-3">
+            <a href="/" className="flex items-center gap-2 group">
+              <div className="relative flex h-9 w-9 items-center justify-center rounded-lg bg-primary-500 text-white transition-all duration-300 group-hover:bg-red-500 group-hover:scale-110 group-hover:shadow-lg group-hover:shadow-red-500/30">
+                <Heart className="h-5 w-5 transition-all duration-300 group-hover:fill-white group-hover:animate-[heartbeat_0.6s_ease-in-out_infinite]" />
+              </div>
+              <span className="text-xl font-bold text-gray-900">
+                Med<span className="text-primary-500 transition-colors duration-300 group-hover:text-red-500">Care</span>
+              </span>
+            </a>
+            <span className="hidden md:inline-block rounded-full border border-primary-200 bg-primary-50 px-3 py-1 text-[11px] font-medium text-primary-600 leading-tight">
+              Strona demonstracyjna &mdash; dane przykładowe
             </span>
-          </a>
+          </div>
 
           {/* Desktop nav */}
           <nav className="hidden md:flex items-center gap-1">
@@ -43,7 +48,7 @@ export default function Header() {
 
           {/* CTA desktop */}
           <a
-            href="#kontakt"
+            href="/#kontakt"
             className="group/cta relative hidden md:inline-flex items-center gap-2.5 overflow-hidden rounded-lg bg-primary-500 px-5 py-2.5 text-sm font-semibold text-white shadow-sm active:scale-95 transition-all duration-300 hover:shadow-xl hover:shadow-primary-500/30"
           >
             {/* Shine sweep */}
@@ -87,7 +92,7 @@ export default function Header() {
               </a>
             ))}
             <a
-              href="#kontakt"
+              href="/#kontakt"
               onClick={() => setMobileOpen(false)}
               className="block mt-2 text-center rounded-lg bg-primary-500 px-5 py-2.5 text-sm font-semibold text-white hover:bg-primary-600 transition-colors"
             >

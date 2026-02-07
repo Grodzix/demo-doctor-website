@@ -1,20 +1,12 @@
 import { Heart, Phone, Mail, MapPin } from "lucide-react";
+import { services } from "@/data/services";
 
 const quickLinks = [
-  { label: "O nas", href: "#o-nas" },
-  { label: "Usługi", href: "#uslugi" },
-  { label: "Lekarze", href: "#lekarze" },
-  { label: "Opinie", href: "#opinie" },
-  { label: "Kontakt", href: "#kontakt" },
-];
-
-const serviceLinks = [
-  "Kardiologia",
-  "Neurologia",
-  "Okulistyka",
-  "Pediatria",
-  "Ortopedia",
-  "Dermatologia",
+  { label: "O nas", href: "/#o-nas" },
+  { label: "Usługi", href: "/#uslugi" },
+  { label: "Lekarze", href: "/#lekarze" },
+  { label: "Opinie", href: "/#opinie" },
+  { label: "Kontakt", href: "/#kontakt" },
 ];
 
 export default function Footer() {
@@ -24,7 +16,7 @@ export default function Footer() {
         <div className="grid gap-12 sm:grid-cols-2 lg:grid-cols-4">
           {/* Brand */}
           <div className="lg:col-span-1">
-            <a href="#" className="flex items-center gap-2">
+            <a href="/" className="flex items-center gap-2">
               <div className="flex h-9 w-9 items-center justify-center rounded-lg bg-primary-500 text-white">
                 <Heart className="h-5 w-5" />
               </div>
@@ -39,7 +31,9 @@ export default function Footer() {
             {/* Social */}
             <div className="mt-6 flex gap-3">
               <a
-                href="#"
+                href="https://facebook.com/medcare.przychodnia"
+                target="_blank"
+                rel="noopener noreferrer"
                 aria-label="Facebook"
                 className="flex h-10 w-10 items-center justify-center rounded-lg bg-gray-800 text-gray-400 hover:bg-primary-500 hover:text-white transition-colors"
               >
@@ -48,7 +42,9 @@ export default function Footer() {
                 </svg>
               </a>
               <a
-                href="#"
+                href="https://instagram.com/medcare.przychodnia"
+                target="_blank"
+                rel="noopener noreferrer"
                 aria-label="Instagram"
                 className="flex h-10 w-10 items-center justify-center rounded-lg bg-gray-800 text-gray-400 hover:bg-primary-500 hover:text-white transition-colors"
               >
@@ -57,7 +53,9 @@ export default function Footer() {
                 </svg>
               </a>
               <a
-                href="#"
+                href="https://linkedin.com/company/medcare-przychodnia"
+                target="_blank"
+                rel="noopener noreferrer"
                 aria-label="LinkedIn"
                 className="flex h-10 w-10 items-center justify-center rounded-lg bg-gray-800 text-gray-400 hover:bg-primary-500 hover:text-white transition-colors"
               >
@@ -87,19 +85,19 @@ export default function Footer() {
             </ul>
           </div>
 
-          {/* Services */}
+          {/* Services - dynamically from data */}
           <div>
             <h3 className="text-sm font-semibold uppercase tracking-wider text-white">
               Specjalizacje
             </h3>
             <ul className="mt-4 space-y-3">
-              {serviceLinks.map((service) => (
-                <li key={service}>
+              {services.map((service) => (
+                <li key={service.slug}>
                   <a
-                    href="#uslugi"
+                    href={`/uslugi/${service.slug}`}
                     className="text-sm text-gray-400 hover:text-primary-400 transition-colors"
                   >
-                    {service}
+                    {service.name}
                   </a>
                 </li>
               ))}
@@ -138,12 +136,12 @@ export default function Footer() {
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-6 flex flex-col sm:flex-row justify-between items-center gap-4 text-sm text-gray-500">
           <p>&copy; {new Date().getFullYear()} MedCare. Wszelkie prawa zastrzeżone.</p>
           <div className="flex gap-6">
-            <a href="#" className="hover:text-gray-300 transition-colors">
+            <span className="text-gray-600">
               Polityka prywatności
-            </a>
-            <a href="#" className="hover:text-gray-300 transition-colors">
+            </span>
+            <span className="text-gray-600">
               Regulamin
-            </a>
+            </span>
           </div>
         </div>
       </div>

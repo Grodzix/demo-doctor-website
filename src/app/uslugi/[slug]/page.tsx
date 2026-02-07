@@ -1,7 +1,7 @@
 import { notFound } from "next/navigation";
 import Image from "next/image";
 import Link from "next/link";
-import { ArrowLeft, CheckCircle2 } from "lucide-react";
+import { CheckCircle2 } from "lucide-react";
 import { services, getServiceBySlug } from "@/data/services";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
@@ -49,13 +49,13 @@ export default async function ServicePage({
           <div className="absolute inset-0 bg-gradient-to-t from-gray-900/80 via-gray-900/40 to-transparent" />
           <div className="absolute inset-0 flex items-end">
             <div className="mx-auto max-w-7xl w-full px-4 sm:px-6 lg:px-8 pb-10">
-              <Link
-                href="/#uslugi"
-                className="inline-flex items-center gap-2 text-sm text-white/80 hover:text-white mb-4 transition-colors"
-              >
-                <ArrowLeft className="h-4 w-4" />
-                Powrót do usług
-              </Link>
+              <nav aria-label="Breadcrumb" className="flex items-center gap-1.5 text-sm text-white/70 mb-4">
+                <a href="/" className="hover:text-white transition-colors">Strona główna</a>
+                <span className="text-white/40">/</span>
+                <a href="/#uslugi" className="hover:text-white transition-colors">Usługi</a>
+                <span className="text-white/40">/</span>
+                <span className="text-white font-medium">{service.name}</span>
+              </nav>
               <div className="flex items-center gap-4">
                 <div className="flex h-14 w-14 items-center justify-center rounded-xl bg-white/20 backdrop-blur-sm text-white">
                   <service.icon className="h-7 w-7" />

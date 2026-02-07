@@ -79,7 +79,7 @@ export const doctors: Doctor[] = [
     specialty: "Pediatra",
     shortDesc:
       "Doświadczony pediatra z podejściem nastawionym na dziecko i rodzica. 15 lat praktyki klinicznej.",
-    image: "/photos/doctor3.jpg",
+    image: "/photos/doctor4.jpg",
     initials: "KW",
     gradient: "from-primary-300 to-primary-500",
     about:
@@ -109,7 +109,7 @@ export const doctors: Doctor[] = [
     specialty: "Ortopeda",
     shortDesc:
       "Specjalista chirurgii ortopedycznej i traumatologii. Doświadczenie w medycynie sportowej.",
-    image: "/photos/doctor4.jpg",
+    image: "/photos/doctor3.jpg",
     initials: "TZ",
     gradient: "from-accent-300 to-accent-500",
     about:

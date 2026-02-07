@@ -5,8 +5,8 @@ import {
   Baby,
   Bone,
   Stethoscope,
-  Microscope,
-  Activity,
+  SmilePlus,
+  Microscope as MicroscopeIcon,
 } from "lucide-react";
 import type { LucideIcon } from "lucide-react";
 
@@ -245,7 +245,7 @@ export const services: Service[] = [
   },
   {
     slug: "dermatologia",
-    icon: Microscope,
+    icon: SmilePlus,
     name: "Dermatologia",
     shortDesc:
       "Diagnostyka i leczenie chorób skóry. Dermatoskopia, zabiegi estetyczne, alergologia skórna.",
@@ -281,7 +281,7 @@ export const services: Service[] = [
   },
   {
     slug: "endokrynologia",
-    icon: Activity,
+    icon: MicroscopeIcon,
     name: "Endokrynologia",
     shortDesc:
       "Choroby tarczycy i układu hormonalnego. USG tarczycy, biopsja, leczenie cukrzycy.",
