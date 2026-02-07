@@ -1,26 +1,84 @@
 @import "tailwindcss";
 
-:root {
-	--background: #ffffff;
-	--foreground: #171717;
-}
-
 @theme inline {
-	--color-background: var(--background);
-	--color-foreground: var(--foreground);
-	--font-sans: var(--font-geist-sans);
-	--font-mono: var(--font-geist-mono);
-}
+  --color-primary-50: #e6f7f7;
+  --color-primary-100: #b3e8e8;
+  --color-primary-200: #80d9d9;
+  --color-primary-300: #4dcaca;
+  --color-primary-400: #26bfbf;
+  --color-primary-500: #0d9e9e;
+  --color-primary-600: #0b8585;
+  --color-primary-700: #086b6b;
+  --color-primary-800: #065252;
+  --color-primary-900: #033939;
 
-@media (prefers-color-scheme: dark) {
-	:root {
-		--background: #0a0a0a;
-		--foreground: #ededed;
-	}
+  --color-accent-50: #fef7ed;
+  --color-accent-100: #fcebd0;
+  --color-accent-200: #f9d4a0;
+  --color-accent-300: #f5b96b;
+  --color-accent-400: #f0982e;
+  --color-accent-500: #e87c0f;
+  --color-accent-600: #c4620a;
+  --color-accent-700: #9c4c0b;
+  --color-accent-800: #7d3d10;
+  --color-accent-900: #673311;
+
+  --color-gray-50: #f8fafc;
+  --color-gray-100: #f1f5f9;
+  --color-gray-200: #e2e8f0;
+  --color-gray-300: #cbd5e1;
+  --color-gray-400: #94a3b8;
+  --color-gray-500: #64748b;
+  --color-gray-600: #475569;
+  --color-gray-700: #334155;
+  --color-gray-800: #1e293b;
+  --color-gray-900: #0f172a;
+
+  --font-sans: var(--font-geist-sans), system-ui, sans-serif;
 }
 
 body {
-	background: var(--background);
-	color: var(--foreground);
-	font-family: Arial, Helvetica, sans-serif;
+  background: #ffffff;
+  color: var(--color-gray-800);
+  font-family: var(--font-sans);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+@keyframes wiggle {
+  0% {
+    transform: rotate(0deg);
+  }
+  20% {
+    transform: rotate(-15deg);
+  }
+  40% {
+    transform: rotate(12deg);
+  }
+  60% {
+    transform: rotate(-8deg);
+  }
+  80% {
+    transform: rotate(5deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
+
+@keyframes heartbeat {
+  0%, 100% {
+    transform: scale(1);
+  }
+  25% {
+    transform: scale(1.3);
+  }
+  50% {
+    transform: scale(1);
+  }
+  75% {
+    transform: scale(1.15);
+  }
 }
