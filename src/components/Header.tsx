@@ -52,14 +52,14 @@ export default function Header() {
                   Med<span className="text-primary-500 transition-colors duration-300 group-hover:text-red-500">Care</span>
                 </span>
               </a>
-              <span className="rounded-full border border-primary-200 bg-primary-50 px-2 md:px-3 py-0.5 md:py-1 text-[9px] md:text-[11px] font-medium text-primary-600 leading-tight">
-                <span className="hidden md:inline">Strona demonstracyjna &mdash; dane przykładowe</span>
-                <span className="md:hidden">Demo &mdash; dane przykładowe</span>
+              <span className="rounded-full border border-primary-200 bg-primary-50 px-2 lg:px-3 py-0.5 lg:py-1 text-[9px] lg:text-[11px] font-medium text-primary-600 leading-tight">
+                <span className="hidden lg:inline">Strona demonstracyjna &mdash; dane przykładowe</span>
+                <span className="lg:hidden">Demo &mdash; dane przykładowe</span>
               </span>
             </div>
 
             {/* Desktop nav */}
-            <nav className="hidden md:flex items-center gap-1">
+            <nav className="hidden lg:flex items-center gap-1">
               {navLinks.map((link) => (
                 <a
                   key={link.href}
@@ -74,7 +74,7 @@ export default function Header() {
             {/* CTA desktop */}
             <a
               href="/#kontakt"
-              className="group/cta relative hidden md:inline-flex items-center gap-2.5 overflow-hidden rounded-lg bg-primary-500 px-5 py-2.5 text-sm font-semibold text-white shadow-sm active:scale-95 transition-all duration-300 hover:shadow-xl hover:shadow-primary-500/30"
+              className="group/cta relative hidden lg:inline-flex items-center gap-2.5 overflow-hidden rounded-lg bg-primary-500 px-5 py-2.5 text-sm font-semibold text-white shadow-sm active:scale-95 transition-all duration-300 hover:shadow-xl hover:shadow-primary-500/30"
             >
               {/* Shine sweep */}
               <span className="absolute inset-0 -translate-x-full bg-gradient-to-r from-transparent via-white/25 to-transparent group-hover/cta:translate-x-full transition-transform duration-700 ease-in-out" />
@@ -94,7 +94,7 @@ export default function Header() {
             {/* Mobile hamburger */}
             <button
               onClick={() => setMobileOpen(true)}
-              className="md:hidden p-2 rounded-lg text-gray-600 hover:bg-gray-100 transition-colors"
+              className="lg:hidden p-2 rounded-lg text-gray-600 hover:bg-gray-100 transition-colors"
               aria-label="Otwórz menu"
             >
               <Menu className="h-6 w-6" />
@@ -105,7 +105,7 @@ export default function Header() {
 
       {/* Mobile slide-in drawer */}
       <div
-        className={`fixed inset-0 z-[100] md:hidden transition-visibility ${
+        className={`fixed inset-0 z-[100] lg:hidden transition-visibility ${
           mobileOpen ? "visible" : "invisible delay-300"
         }`}
         aria-modal="true"
