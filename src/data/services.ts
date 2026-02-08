@@ -69,8 +69,8 @@ export const services: Service[] = [
     name: "Neurologia",
     shortDesc:
       "Kompleksowa diagnostyka neurologiczna. Leczenie migren, padaczki, chorób demielinizacyjnych.",
-    image: "/photos/endocynology-microscope-womanlookinginto.jpg",
-    heroImage: "/photos/endocynology-microscope-womanlookinginto.jpg",
+    image: "/photos/neurologist-brain.jpg",
+    heroImage: "/photos/neurologist-brain.jpg",
     fullDescription:
       "Oddział neurologii w MedCare specjalizuje się w diagnostyce i leczeniu chorób układu nerwowego. Oferujemy konsultacje neurologiczne, badania elektrofizjologiczne oraz nowoczesne metody terapii. Nasi neurolodzy zajmują się leczeniem bólów głowy, padaczki, stwardnienia rozsianego, choroby Parkinsona oraz neuropatii.",
     benefits: [
@@ -213,8 +213,8 @@ export const services: Service[] = [
     name: "Internista",
     shortDesc:
       "Medycyna ogólna i chorób wewnętrznych. Diagnostyka, profilaktyka, programy zdrowotne.",
-    image: "/photos/heart-doctor-small.jpg",
-    heroImage: "/photos/heart-doctor-small.jpg",
+    image: "/photos/internist-blood-preasure.jpg",
+    heroImage: "/photos/internist-blood-preasure.jpg",
     fullDescription:
       "Internista to lekarz pierwszego kontaktu w wielu sytuacjach zdrowotnych. Nasi interniści zajmują się diagnostyką i leczeniem chorób wewnętrznych, w tym nadciśnienia tętniczego, cukrzycy, chorób tarczycy, infekcji i stanów zapalnych. Prowadzą również programy profilaktyki zdrowotnej.",
     benefits: [

@@ -28,7 +28,7 @@ export default function Hero() {
               <span className="text-primary-500">nasza misja</span>
             </h1>
 
-            <p className="mt-4 sm:mt-6 text-base sm:text-xl text-gray-600 leading-relaxed max-w-2xl">
+            <p className="mt-4 sm:mt-6 text-base sm:text-xl text-gray-600 leading-relaxed max-w-2xl text-justify">
               Profesjonalna opieka medyczna w jednym miejscu. Szeroki zakres
               specjalizacji, doświadczony zespół lekarzy i nowoczesne podejście
               do Twojego zdrowia.
@@ -80,7 +80,7 @@ export default function Hero() {
                 <svg className="h-4 w-4 sm:h-5 sm:w-5 text-primary-500 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
                   <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
                 </svg>
-                <span>W 2 minuty</span>
+                <span>Zadzwoń i umów się w 2 minuty</span>
               </div>
               <div className="flex items-center gap-1.5 sm:gap-2">
                 <svg className="h-4 w-4 sm:h-5 sm:w-5 text-primary-500 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
