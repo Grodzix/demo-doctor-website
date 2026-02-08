@@ -34,6 +34,7 @@ interface FormErrors {
   phone?: string;
   email?: string;
   message?: string;
+  rodo?: string;
 }
 
 export default function Contact() {
@@ -42,6 +43,7 @@ export default function Contact() {
     phone: "",
     email: "",
     message: "",
+    rodo: false,
   });
   const [errors, setErrors] = useState<FormErrors>({});
   const [submitted, setSubmitted] = useState(false);
@@ -78,6 +80,11 @@ export default function Contact() {
       e.message = "Wiadomość jest wymagana";
     } else if (form.message.trim().length < 10) {
       e.message = "Minimum 10 znaków";
+    }
+
+    // RODO consent
+    if (!form.rodo) {
+      e.rodo = "Zgoda jest wymagana";
     }
 
     return e;
@@ -133,7 +140,7 @@ export default function Contact() {
             <button
               onClick={() => {
                 setSubmitted(false);
-                setForm({ name: "", phone: "", email: "", message: "" });
+                setForm({ name: "", phone: "", email: "", message: "", rodo: false });
               }}
               className="mt-6 text-sm font-medium text-primary-500 hover:text-primary-600 transition-colors cursor-pointer"
             >
@@ -247,6 +254,30 @@ export default function Contact() {
                   <p className="mt-1.5 text-xs text-red-500">
                     {errors.message}
                   </p>
+                )}
+              </div>
+
+              <div>
+                <label className="flex items-start gap-3 cursor-pointer group/rodo">
+                  <input
+                    type="checkbox"
+                    checked={form.rodo}
+                    onChange={(e) => {
+                      setForm((prev) => ({ ...prev, rodo: e.target.checked }));
+                      if (errors.rodo) {
+                        setErrors((prev) => ({ ...prev, rodo: undefined }));
+                      }
+                    }}
+                    className="mt-0.5 h-4 w-4 rounded border-gray-300 text-primary-500 focus:ring-primary-400 accent-primary-500 cursor-pointer flex-shrink-0"
+                  />
+                  <span className={`text-xs leading-relaxed ${errors.rodo ? "text-red-500" : "text-gray-500"} group-hover/rodo:text-gray-700 transition-colors`}>
+                    Wyrażam zgodę na przetwarzanie moich danych osobowych zgodnie z{" "}
+                    <span className="underline">Polityką Prywatności</span> w celu
+                    obsługi mojego zapytania. <span className="text-red-400">*</span>
+                  </span>
+                </label>
+                {errors.rodo && (
+                  <p className="mt-1.5 ml-7 text-xs text-red-500">{errors.rodo}</p>
                 )}
               </div>
 
